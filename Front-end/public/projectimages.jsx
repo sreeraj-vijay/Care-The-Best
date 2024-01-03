@@ -1,0 +1,1 @@
+export const IMAGE='http://localhost:3000/Media/'

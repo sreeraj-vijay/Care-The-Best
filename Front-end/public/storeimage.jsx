@@ -1,0 +1,1 @@
+export const STORE_IMAGE='http://localhost:3000/Media/'
