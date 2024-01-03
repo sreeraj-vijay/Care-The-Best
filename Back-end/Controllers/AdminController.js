@@ -1,5 +1,5 @@
 import asyncHandler from "express-async-handler"
-import Admin from "../Models/Adminmodel.js";
+import Admin from "../Models/AdminModel.js"
 import Addstore from "../Models/Addstoremodel.js";
 import generateToken from "../Tokens/AdminToken.js";
 import User from "../Models/UserModel.js";
