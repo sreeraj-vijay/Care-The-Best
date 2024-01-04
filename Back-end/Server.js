@@ -1,4 +1,5 @@
 import express from "express"
+import path from "path"
 import userRoute from './Routes/UserRoute.js';
 import adminRoute from "./Routes/AdminRoute.js"
 import rescuerRoute from "./Routes/RescuerRoute.js"
@@ -26,14 +27,23 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-
-app.get('/',(req,res)=>{
-    res.send("Server is Ready")
-})
 app.use("/user",userRoute)
 app.use("/admin",adminRoute)
 app.use("/rescuer",rescuerRoute)
 app.use("/stripe",Paymentrouter)
+
+if(process.env.NODE_ENV==="production"){
+  console.log("hai")
+  const __dirname=path.resolve()
+  const parentDir = path.join(__dirname, '..');
+  console.log(parentDir)
+  app.use(express.static(path.join(parentDir,'/Front-end/dist')))
+  app.get('*',(req,res)=>res.sendFile(path.resolve(parentDir,'Front-end','dist','index.html')))
+}else{
+app.get('/',(req,res)=>{
+    res.send("Server is Ready")
+})
+}
 const server = app.listen(port,()=>{
     console.log(`server started successfully on ${port}`)
 })
