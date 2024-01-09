@@ -317,7 +317,7 @@ function RescueReport() {
                 className="mt-6 bg-blue-500 hover:bg-blue-700 text-white px-6 py-3 rounded-full uppercase text-sm font-semibold tracking-wide"
                 type="submit"
               >
-                Add Store
+               Proceed
               </button>
             </div>
           </div>

@@ -7,7 +7,7 @@ import chatimage from "../../assets/chatimage.jpg";
 import { IMAGE } from '../../../public/projectimages';
 
 
-const ENDPOINT = "http://localhost:3000"
+const ENDPOINT = "https://care-the-best.sreerajvijay.fyi"
 var socket, selectedChatCompare;
 
 const CreateChatroom = () => {

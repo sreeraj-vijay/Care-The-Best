@@ -1,1 +1,1 @@
-export const STORE_IMAGE='http://localhost:3000/Media/'
+export const STORE_IMAGE='https://care-the-best.sreerajvijay.fyi/Media/'

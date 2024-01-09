@@ -301,7 +301,7 @@ const resendOtp=asyncHandler(async(req,res)=>{
 const forgotpasswordResendOTP=asyncHandler(async(req,res)=>{
   try{
     const data = req.body.user
-    const {email}=data.user
+    const {email}=data.userdata
     const Userotp=await generateOTP(6)
     const mailOptions = {
       from: nodemailerfrom,

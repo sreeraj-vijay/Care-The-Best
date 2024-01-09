@@ -6,17 +6,17 @@ const Contact = () => {
   const [name,setName]=useState("")
   const [email,setEmail]=useState("")
   return (
-    <div className="m-16 min-h-screen flex flex-col items-center justify-center md:mx-32 mx-5 mt-10">
+    <div className="m-24 min-h-screen flex flex-col items-center justify-center md:mx-32 mx-5 sm:mt-28">
       <Heading title1="Contact" title2="Us" />
 
       <div className="flex flex-col md:flex-row justify-between w-full mt-8 ">
         <form className="w-full md:w-2/5 space-y-5">
           <div className="flex flex-col">
-            <label htmlFor="userName" className="label  w-[400px] pt-8">
+            <label htmlFor="userName" className="label w-[400px] pt-8">
               Your Name
             </label>
             <input
-              className="input-field w-[400px] h-10"
+              className="input-field w-[330px]  md:w-[400px] h-10"
               type="text"
               name="userName"
               value={name}
@@ -29,7 +29,7 @@ const Contact = () => {
               Your Email
             </label>
             <input
-              className="input-field  w-[400px] h-10"
+              className="input-field w-[330px]  md:w-[400px] h-10"
               type="email"
               name="userEmail"
               value={email}
@@ -43,7 +43,7 @@ const Contact = () => {
             </label>
             <textarea
              rows={5}
-              className="input-field  w-[400px] bg-slate-200"
+              className="input-field w-[330px] md:w-[400px] bg-slate-200"
               type="text"
               name="userNumber"
               id="userNumber"

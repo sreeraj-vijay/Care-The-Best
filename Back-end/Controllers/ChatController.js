@@ -183,11 +183,11 @@ const createRoom = asyncHandler(async(req,res)=>{
     const chatedUser = asyncHandler(async (req, res) => {
         const email = req.body.email;
         const rescuerData = await Rescuer.findOne({ email: email });
-      
+      console.log(rescuerData)
         if (rescuerData) {
           try {
             const chatDetails = await Chat.find({ rescuer: rescuerData._id });
-      
+      console.log(chatDetails)
             if (chatDetails.length > 0) {
               const userPromises = chatDetails.map(async (room) => {
                 const userId = room.user; // Adjust the field name accordingly
@@ -199,7 +199,7 @@ const createRoom = asyncHandler(async(req,res)=>{
               });
       
               const userDataArray = await Promise.all(userPromises);
-      
+      console.log(userDataArray)
               // Now, userDataArray is an array containing user data for all rooms
             
               res.status(200).json(userDataArray);

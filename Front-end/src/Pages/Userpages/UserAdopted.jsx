@@ -37,7 +37,7 @@ try{
 }
 const lastPostIndex = currentPage * postsPerPage;
 const firstPostIndex = lastPostIndex - postsPerPage;
-const currentPosts =  data.filter((item)=>{return search.toLowerCase()=="" ? item : item.district.toLowerCase().includes(search)}).slice(firstPostIndex, lastPostIndex);
+const currentPosts =  data.filter((item)=>{return search.toLowerCase()=="" ? item : item.animal.toLowerCase().includes(search)}).slice(firstPostIndex, lastPostIndex);
 return (
   (Load ? (
     <Loading />
@@ -102,7 +102,7 @@ return (
       ))}
     </div>
   ) : (
-    <p>No animals available</p>
+    <p className="p-28">No animals available</p>
   )
 ) : null}
 

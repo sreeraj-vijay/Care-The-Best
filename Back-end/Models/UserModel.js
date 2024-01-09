@@ -25,7 +25,7 @@ const userSchema = mongoose.Schema(
     },
     isListed: {
       type: Boolean,
-      default: false
+      default: true
     },
     googleLogin: {
       type: Boolean,

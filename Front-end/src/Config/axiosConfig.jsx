@@ -1,6 +1,6 @@
 import axios from "axios"
 const axiospath = axios.create({
-  baseURL: 'http://localhost:3000',
+	baseURL: 'https://care-the-best.sreerajvijay.fyi',
   withCredentials: true,
 });
 

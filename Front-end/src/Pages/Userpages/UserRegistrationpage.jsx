@@ -136,7 +136,7 @@ function UserRegistrationPage() {
                 className="text-red-600 hover:underline hover:underline-offset-4"
                 href="#"
               >
-               <Link to="/Users/Login">Login</Link>
+               <Link to="/Users/Login">Sign in</Link>
               </a>
             </div>
             <GoogleOAuthProvider clientId="119522868035-tfbaa6lr3a8ue1sd8iqdhh119n7mj5g3.apps.googleusercontent.com">
